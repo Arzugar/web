@@ -1,1 +1,1 @@
-# web
+Les fichiers templates et static devrait probablement pas être là mais plutôt dans l'app.
