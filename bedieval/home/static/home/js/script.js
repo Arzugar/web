@@ -1,10 +1,14 @@
 window.onscroll = function () {
-    var header = document.querySelector('.pinning_header_container');
+    var nav_bar = document.getElementById('nav-bar-id');
     if (window.scrollY > 0) {
         console.log('scrolling');
-        header.style.backgroundColor = 'red'; // Add this line to change the background color
+        nav_bar.style.transition = 'background-color 0.3s, background-image 0.3s';
+        nav_bar.style.backgroundColor = '#141414';
+        nav_bar.style.backgroundImage = '';
     } else {
         console.log('att_the top');
-        header.style.backgroundColor = 'transparent';
+        nav_bar.style.transition = 'background-color 0.3s, background-image 0.3s';
+        nav_bar.style.backgroundColor = 'transparent';
+        nav_bar.style.backgroundImage = "linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent)";
     }
 };
