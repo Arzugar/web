@@ -52,73 +52,11 @@
 
 
     <div class="articles-lists-container">
-        <div class="row-title">
-            <h2 class="text-white med-text">la première ligne</h2>
-        </div>
-
         <div class="gradient-container">
             <!-- que pour la 1ère ligne -->
-            <div class="row g-1">
-                <div class="col">
-                    <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 1" class="">
-                </div>
-                <div class="col">
-                    <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 2" class="">
-                </div>
-                <div class="col">
-                    <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 3" class="">
-                </div>
-                <div class="col">
-                    <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 3" class="">
-                </div>
-                <div class="col">
-                    <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 3" class="">
-                </div>
-                <div class="col">
-                    <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 3" class="">
-                </div>
-                <div class="col">
-                    <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 3" class="">
-                </div>
-
-            </div>
-
+            {% include 'home/member_list.html' %}
+            {% include 'home/event_list.html' %}
         </div>
-        <div class="row-title">
-            <h2 class="text-white med-text">Et la 2e ligne</h2>
-        </div>
-        <div class="row g-1">
-            <div class="col">
-                <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 1" class="">
-            </div>
-            <div class="col">
-                <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 2" class="">
-            </div>
-            <div class="col">
-                <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 3" class="">
-            </div>
-            <div class="col">
-                <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 3" class="">
-            </div>
-            <div class="col">
-                <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 3" class="">
-            </div>
-            <div class="col">
-                <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 3" class="">
-            </div>
-            <div class="col">
-                <img src="{% static 'home/images/aph.jpg' %}" alt="Thumbnail 3" class="">
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    </div>
-
-    </div>
     </div>
 
 </body>
