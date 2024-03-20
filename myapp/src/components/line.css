@@ -1,0 +1,26 @@
+.line-container {
+    display: flex;
+    align-items: left;
+    overflow: scroll;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.card {}
+
+.mystack {
+    margin-top: 20px;
+    flex-shrink: 0;
+    -ms-overflow-style: none;
+    /*marche pas pour désactiver la scrollbar*/
+    /* Internet Explorer et Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+}
+
+.mystack::-webkit-scrollbar {
+    display: none;
+    /* Marche pas non plus*/
+    /* Chrome, Safari et Opera */
+}
