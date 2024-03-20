@@ -9,18 +9,23 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     return (
-        <Navbar expand="lg" className="navbar-expand-lg navbar-collapse navbar-dark">
-            <Container>
-                <Navbar.Brand href="#home">
-                    <img alt="Ouais tkt" className='logo_img' src={logo}></img>
 
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto" activeClassName="active" >
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/presentations">Présentations</Nav.Link>
-                        {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+        <Navbar expand="md" className="navbar-collapse navbar-dark">
+
+            <Navbar.Brand href="#h</Navbar>ome">
+                <img alt="Ouais tkt" className='logo_img' src={logo}></img>
+
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" className="" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto" activeClassName="active" >
+                    <Nav.Link as={Link} to="/">Home</Nav.Link>
+                    <Nav.Link as={Link} to="/presentations">Présentations</Nav.Link>
+                    <Nav.Link as={Link} to="/">Truc</Nav.Link>
+                    <Nav.Link as={Link} to="/">Machin</Nav.Link>
+                    <Nav.Link as={Link} to="/">Jamais on a autant de pages</Nav.Link>
+
+                    {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
                                 Another action
@@ -31,10 +36,11 @@ function Header() {
                                 Separated link
                             </NavDropdown.Item>
                         </NavDropdown> */}
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
+                </Nav>
+            </Navbar.Collapse>
         </Navbar>
+
+
     );
 
 }

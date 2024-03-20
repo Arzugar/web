@@ -1,14 +1,24 @@
 :root {
     --left-margin: 20px;
-    width: fit-content;
 }
+
+
 
 .navbar {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, .7) 10%, transparent);
-    background-color: transparent;
     height: 70px;
     width: 100%;
     top: 0;
+}
+
+.navbar-collapse {
+    background-color: black;
+    z-index: 1000;
+
+}
+
+.navbar-nav {
+    margin-left: var(--left-margin);
 }
 
 .nav-link {
@@ -16,6 +26,12 @@
     font-size: 1.2rem;
 
 }
+
+#text-over-bg {
+    width: 100%;
+    margin-left: var(--left-margin);
+}
+
 
 .nav-link.active {
     color: #ff3907;
@@ -31,5 +47,6 @@
 }
 
 body {
-    background-color: black;
+    background-color: black !important;
+
 }
