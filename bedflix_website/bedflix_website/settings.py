@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-)$gedqxxl)-1uk7v*c50jq4%d31dy^1d3ur-u!gn_5^!tl#$s2"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["bedflix.fr", "127.0.0.1"]
 
 
 # Application definition
@@ -48,6 +48,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = "bedflix_website.urls"
@@ -55,7 +57,9 @@ ROOT_URLCONF = "bedflix_website.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        'DIRS': [BASE_DIR / "staticfiles",
+                 "/home/lpottier/Documents/boulot/side_projects/site_bedflix/myapp/build"
+                 ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -116,7 +120,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+STATICFILES_DIRS = [
+    BASE_DIR / ".." / "myapp/build/static",
+    BASE_DIR / "static",]
+
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

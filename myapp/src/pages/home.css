@@ -1,0 +1,52 @@
+:root {
+    --left-margin: 50px;
+}
+
+
+body {
+    background-color: black !important;
+
+}
+
+.BackImage {
+    z-index: -1;
+    width: 100%;
+    margin-top: -70px;
+    position: absolute;
+}
+
+.PageTop {
+    position: relative;
+}
+
+.TextOverImage {
+    padding: auto;
+    margin-left: var(--left-margin);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 100%;
+    width: 20%;
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+}
+
+
+.btn {
+    width: fit-content;
+    ;
+}
+
+.PlayButtonImage {
+    max-width: 20px;
+    margin-right: 10px;
+}
+
+.last-text {
+    margin-bottom: 10%;
+}
+
+.Line {
+    overflow: hidden;
+}

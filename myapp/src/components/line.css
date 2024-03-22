@@ -1,25 +1,48 @@
 .line-container {
     display: flex;
     align-items: left;
-    overflow: scroll;
-    width: 100%;
-    margin-top: 100px;
+
 }
 
 
 .mystack {
+    overflow: scroll;
+    position: relative;
     margin-top: 20px;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     -ms-overflow-style: none;
     /*marche pas pour désactiver la scrollbar*/
     /* Internet Explorer et Edge */
     scrollbar-width: none;
     /* Firefox */
+    margin-left: var(--left-margin);
 
 }
 
 .mystack::-webkit-scrollbar {
     display: none;
-    /* Marche pas non plus*/
     /* Chrome, Safari et Opera */
+}
+
+.ScrollButtonRight {
+    right: 0;
+}
+
+.ScrollButtonLeft {
+    left: var(--left-margin);
+}
+
+
+.ScrollButton {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.ScrollButton:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
