@@ -4,14 +4,15 @@
 
 }
 
-.mystackscroll{
+.ScrollContainer {
     overflow: scroll;
     position: relative;
     -ms-overflow-style: none;
     scrollbar-width: none;
     margin-left: var(--left-margin);
 }
-.mystackscroll::-webkit-scrollbar {
+
+.ScrollContainer::-webkit-scrollbar {
     display: none;
     /* Chrome, Safari et Opera */
 }

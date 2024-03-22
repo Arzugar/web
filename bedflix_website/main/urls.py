@@ -7,7 +7,7 @@ urlpatterns = [
     path('membres', views.get_membres_id),
     path('poles', views.get_poles_id),
     path('evenements', views.get_evenements_id),
-    path('membre/<int:id>', views.get_membre),
-    path('pole/<int:id>', views.get_pole),
-    path('evenement/<int:id>', views.get_evenement),
+    path('membres/<int:id>', views.get_membre),
+    path('poles/<int:id>', views.get_pole),
+    path('evenements/<int:id>', views.get_evenement),
 ]

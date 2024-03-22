@@ -37,9 +37,9 @@ function Home() {
 
             <div className='LinesContainer'>
                 <Stack direction='vertical' gap={3}>
-                    <Line />
-                    <Line />
-                    <Line />
+                    <Line type="evenements" line_title="Events" />
+                    <Line type="membres" line_title="Vos listeux préférés" />
+                    <Line type="poles" line_title="Les Poles" />
                 </Stack>
             </div>
 

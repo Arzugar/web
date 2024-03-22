@@ -129,10 +129,7 @@ function Serie({ type, id }) {
     return (
         <>
             <Image src={data.image} alt="pic" className="BaseImage" onClick={handleShow} />
-            <CustomModal className='' show={show} onClose={handleClose} data={data}>
-
-
-            </CustomModal >
+            <CustomModal className='' show={show} onClose={handleClose} data={data} />
         </>
     );
 }

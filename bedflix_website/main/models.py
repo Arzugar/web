@@ -11,6 +11,11 @@ class Element(models.Model):
     titre = models.CharField(max_length=20, default="")
     description = models.CharField(max_length=1000, default="")
     image = models.ImageField(upload_to=to_path, blank=True, null=True)
+    info_1 = models.CharField(max_length=1000, default="")
+    info_1_title = models.CharField(max_length=1000, default="")
+    info_2 = models.CharField(max_length=1000, default="")
+    info_2_title = models.CharField(max_length=1000, default="")
+    rating = models.IntegerField(default=98)
 
     def save(self, *args, **kwargs):
         if self.id is None:
