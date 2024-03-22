@@ -13,16 +13,17 @@ function Line({ type, line_title }) {
     const [ids, setIds] = useState([]);
 
     const scrollLeft = () => {
-        scrollContainer.current.scrollLeft -= 3; // Ajustez cette valeur en fonction de la vitesse de défilement souhaitée
+        scrollContainer.current.scrollLeft -= 3;
     };
 
     const scrollRight = () => {
-        scrollContainer.current.scrollLeft += 3; // Ajustez cette valeur en fonction de la vitesse de défilement souhaitée
+        scrollContainer.current.scrollLeft += 3;
     };
 
     useEffect(() => {
-        fetch("/" + type).then(res => res.json()).then(data => {
-            setIds(ids);
+        fetch(`/${type}`).then(res => res.json()).then(data => {
+            setIds(data.id);
+            console.log("Ids set to " + data.id);
         }).catch(err => console.error(err));
 
         const scrollInterval = setInterval(() => {
@@ -31,9 +32,9 @@ function Line({ type, line_title }) {
             } else if (scrolling.direction === 'right') {
                 scrollRight();
             }
-        }, 1); // Ajustez cette valeur en fonction de la fréquence de défilement souhaitée
+        }, 1);
 
-        return () => clearInterval(scrollInterval); // Nettoie l'intervalle lorsque le composant est démonté
+        return () => clearInterval(scrollInterval);
     }, [scrolling, type]);
 
     return (
@@ -48,7 +49,12 @@ function Line({ type, line_title }) {
                 ></button>
                 <div className='ScrollContainer' ref={scrollContainer}>
                     <Stack direction='horizontal' gap={3} className='mystack'>
-                        {ids.map(id => <Serie type={type} id={id} />)}
+                        {
+                            ids.map(function (id) {
+                                console.log("Creating serie with id " + id);
+                                return <Serie id={id} type={type} />;
+                            }
+                            )}
                     </Stack>
                 </div>
                 <button className='ScrollButton ScrollButtonRight'
