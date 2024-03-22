@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.urls import re_path
 from main.views import index_view
 from django.views.static import serve
@@ -25,7 +25,8 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("admin", admin.site.urls),
-    re_path(r'^.*', TemplateView.as_view(template_name='index.html'))
+    #re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
+    path("", include('main.urls')),
     # path("", index_view),
     # re_path(r'^static/(?P<path>.*)$', serve,
     #         {'document_root': settings.STATIC_ROOT}),
