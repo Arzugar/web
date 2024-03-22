@@ -4,7 +4,9 @@ from django.views.generic import TemplateView
 from django.views.decorators.cache import never_cache
 from django.shortcuts import get_object_or_404
 from .models import Membre, Pole, Evenement
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
+from django.forms.models import model_to_dict
+
 
 # Serve Single Page Application
 index_view = never_cache(TemplateView.as_view(template_name="index.html"))
@@ -27,17 +29,28 @@ def get_evenements_id(_):
 
 def get_membre(_, id):
     element = get_object_or_404(Membre, pk=id)
-    data = element.__dict__
+    data = model_to_dict(element)
+    data['image'] = element.image.url
     return JsonResponse(data)
 
 
 def get_pole(_, id):
     element = get_object_or_404(Pole, pk=id)
-    data = element.__dict__
+    data = model_to_dict(element)
+    data['image'] = element.image.url
+
     return JsonResponse(data)
 
 
 def get_evenement(_, id):
     element = get_object_or_404(Evenement, pk=id)
-    data = element.__dict__
+    data = model_to_dict(element)
+    data['image'] = element.image.url
+
     return JsonResponse(data)
+
+
+def get_image(_, path):
+    with open(path, 'rb') as f:
+        image_data = f.read()
+    return HttpResponse(image_data, content_type='image/png')

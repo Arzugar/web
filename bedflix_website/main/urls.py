@@ -10,4 +10,5 @@ urlpatterns = [
     path('membres/<int:id>', views.get_membre),
     path('poles/<int:id>', views.get_pole),
     path('evenements/<int:id>', views.get_evenement),
+    path('images/<str:path>', views.get_image, name='get_image'),
 ]

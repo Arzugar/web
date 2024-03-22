@@ -3,8 +3,8 @@ from django.db import models
 
 def to_path(instance, filename):
     if instance.id:
-        return f'image/{instance.type}/img{instance.id}.png'
-    return f'image/temp_{filename}'
+        return f'images/{instance.type}/img{instance.id}.png'
+    return f'images/temp_{filename}'
 
 
 class Element(models.Model):

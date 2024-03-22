@@ -104,7 +104,7 @@ function Serie({ type, id }) {
             .then(data => setData(data))
             .catch(error => {
                 // Si jamais le serveur ne répond pas
-                console.error("Error fetching data:", error);
+                console.error("Pas réussi à récup le data:", error);
                 // Valeurs par défaut
                 setData({
                     "Title": "Titre par défaut",
