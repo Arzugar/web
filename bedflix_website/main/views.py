@@ -7,8 +7,7 @@ from .models import Membre, Pole, Evenement
 from django.http import JsonResponse
 
 # Serve Single Page Application
-index_view = never_cache(TemplateView.as_view(
-    template_name="index.html"))
+index_view = never_cache(TemplateView.as_view(template_name="index.html"))
 
 def get_membres_id(_):
     elements = Membre.objects.all()
