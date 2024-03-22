@@ -4,24 +4,27 @@
 
 }
 
+.mystackscroll{
+    overflow: scroll;
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-left: var(--left-margin);
+}
+.mystackscroll::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari et Opera */
+}
 
 .mystack {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     overflow: visible;
     position: relative;
     margin-top: 20px;
-    /* flex-shrink: 0; */
-    -ms-overflow-style: none;
-    /*marche pas pour désactiver la scrollbar*/
-    /* Internet Explorer et Edge */
-    scrollbar-width: none;
-    /* Firefox */
-    margin-left: var(--left-margin);
-
-}
-
-.mystack::-webkit-scrollbar {
-    display: none;
-    /* Chrome, Safari et Opera */
+    margin-bottom: 20px;
 }
 
 .ScrollButtonRight {

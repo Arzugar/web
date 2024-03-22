@@ -6,7 +6,6 @@ from django.shortcuts import get_object_or_404
 from .models import Membre, Pole, Evenement
 from django.http import JsonResponse
 
-
 # Serve Single Page Application
 index_view = never_cache(TemplateView.as_view(
     template_name="index.html"))

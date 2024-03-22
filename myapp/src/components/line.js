@@ -41,12 +41,16 @@ function Line() {
                     onMouseUp={() => setScrolling({ direction: null })}
                     onMouseLeave={() => setScrolling({ direction: null })}
                 ></button>
-
-                <Stack direction='horizontal' gap={3} className='mystack' ref={scrollContainer}>
-                    <Serie id={1} />
-                    <Serie id={2} />
-                    <Serie id={3} />
-
+                <Stack direction='horizontal' className='mystackscroll' gap={3} ef={scrollContainer}>
+                    <Stack direction='horizontal' gap={3} className='mystack' ref={scrollContainer}>
+                        <Serie id={1} />
+                        <Serie id={2} />
+                        <Serie id={3} />
+                        <Serie id={4} />
+                        <Serie id={5} />
+                        <Serie id={6} />
+                        <Serie id={7} />
+                    </Stack>
                 </Stack>
                 <button className='ScrollButton ScrollButtonRight'
                     onClick={scrollRight}
