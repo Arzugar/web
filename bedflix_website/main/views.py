@@ -51,6 +51,7 @@ def get_evenement(_, id):
 
 
 def get_image(_, path):
-    with open(path, 'rb') as f:
+    print("appel à get image")
+    with open("images/" + path, 'rb') as f:
         image_data = f.read()
     return HttpResponse(image_data, content_type='image/png')
