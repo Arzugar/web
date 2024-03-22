@@ -21,7 +21,7 @@ function Line({ type, line_title }) {
     };
 
     useEffect(() => {
-        fetch("/${type}").then(res => res.json()).then(data => {
+        fetch("/" + type).then(res => res.json()).then(data => {
             setIds(ids);
         }).catch(err => console.error(err));
 
