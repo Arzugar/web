@@ -1,7 +1,14 @@
 .BaseImage {
     aspect-ratio: 16/9;
     height: 150px;
+    transition: transform 0.5s ease;
+    cursor: pointer; 
+    position: relative;
+}
 
+.BaseImage:hover {
+    transform: scale(1.2);
+    z-index: 1000;
 }
 
 .modal-englobe {}

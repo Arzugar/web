@@ -6,7 +6,7 @@
 
 
 .mystack {
-    overflow: scroll;
+    overflow: visible;
     position: relative;
     margin-top: 20px;
     /* flex-shrink: 0; */

@@ -113,9 +113,9 @@ function Serie({ id }) {
     const handleShow = () => setShow(true);
 
     return (
+        // faire en sorte que l'image s'agrandisse quand on passe la souris dessus
         <>
             <Image src={PH} alt="image de la série" className="BaseImage" onClick={handleShow} />
-
             <CustomModal className='' show={show} onClose={handleClose} data={data}>
 
 
