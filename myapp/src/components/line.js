@@ -33,6 +33,7 @@ function Line() {
 
     return (
         <div>
+            <h2 className="line-title text-primary">Mon titre</h2>
             <div className='StackContainer position-relative'>
                 <button className='ScrollButton ScrollButtonLeft'
                     onClick={scrollLeft}

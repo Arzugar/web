@@ -4,12 +4,37 @@
 
 }
 
+.modal-englobe {}
+
+.description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 .ZoomedImage {
     aspect-ratio: 16/9;
-    height: 300px;
-    border: solid 10px red;
+    width: 100%;
 }
+
+.big-image-container {
+    position: relative;
+}
+
+.serie-title {
+    position: absolute;
+    top: 75%;
+    left: 10%;
+}
+
+/* .ZoomedImage::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, var(--bg-color) 100%, transparent);
+} */
 
 .custom-modal {
     position: fixed;
@@ -22,6 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: all;
 }
 
 .close-button {
@@ -32,10 +58,34 @@
 
 .custom-modal-content {
     background-color: white;
-    padding: 20px;
-    border-radius: 4px;
-    max-width: 90%;
+    max-width: 600px;
     max-height: 90%;
+    min-width: 40%;
     overflow: auto;
     position: relative;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+}
+
+.modal-open {
+    pointer-events: none !important;
+}
+
+.rating {
+    color: green;
+    margin: 10px;
+}
+
+.year {
+    color: lightgray;
+    margin: 5px;
+
+}
+
+.synopsis {
+    margin: 5px
+}
+
+.casting-title {
+    color: gray;
 }

@@ -46,3 +46,7 @@
 .ScrollButton:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.line-title {
+    margin-left: var(--left-margin);
+}
