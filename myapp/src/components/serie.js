@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import "./serie.css";
 import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
-import Tooltip from 'react-bootstrap/Tooltip';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import ReactDOM from 'react-dom';
 import Image from 'react-bootstrap/Image';
-import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import PH from '../images/Infographie.png'
 import PlayButton from "../images/play-button.png"
 import { Link } from 'react-router-dom';
 

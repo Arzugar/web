@@ -1,11 +1,8 @@
 import React from 'react';
 import "./line.css";
-import Container from 'react-bootstrap/Container';
-import { Link } from 'react-router-dom';
 import Stack from 'react-bootstrap/Stack';
 import Serie from './serie';
 import { useRef, useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
 
 function Line({ type, line_title }) {
     const scrollContainer = useRef(null);
