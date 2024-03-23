@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-)$gedqxxl)-1uk7v*c50jq4%d31dy^1d3ur-u!gn_5^!tl#$s2"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["bedflix.fr", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["bedflix.fr", "127.0.0.1", "localhost", "137.194.13.155"]
 
 
 # Application definition
