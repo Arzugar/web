@@ -58,7 +58,8 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         'DIRS': [BASE_DIR / "staticfiles",
-                 "/home/lpottier/Documents/boulot/side_projects/site_bedflix/myapp/build"
+                 BASE_DIR / ".." / "myapp" / "public",
+                 BASE_DIR / ".." / "myapp" / "build"
                  ],
         "APP_DIRS": True,
         "OPTIONS": {
