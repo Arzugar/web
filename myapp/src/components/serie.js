@@ -121,10 +121,13 @@ function Serie({ type, id }) {
 
     return (
         <div className='image-conteneur'>
-            <Image src={data.image} alt="pic" className="BaseImage" onClick={handleShow} />
+            <Image src={data.image} alt="pic" className="BaseImage" onClick={handleShow} >
+
+            </Image>
             <div className="image-overlay">
                 <h2 className="image-title text-primary">{data.titre}</h2>
             </div>
+
             <CustomModal className='' show={show} onClose={handleClose} data={data} />
         </div>
     );

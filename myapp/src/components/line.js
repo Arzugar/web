@@ -30,8 +30,6 @@ function Line({ type, line_title }) {
             setIds(data.id);
             console.log("Ids set to " + data.id);
         }).catch(err => console.error(err));
-        setIds([1]);
-
 
         const scrollInterval = setInterval(() => {
             if (scrolling.direction === 'left') {
@@ -48,12 +46,14 @@ function Line({ type, line_title }) {
         <div>
             <h2 className="line-title text-primary">{line_title}</h2>
             <div className='StackContainer position-relative'>
-                <button className='ScrollButton ScrollButtonLeft'
+                <button className='ScrollButton ScrollButtonLeft d-none d-md-block'
                     onClick={scrollLeft}
                     onMouseDown={() => setScrolling({ direction: 'left' })}
                     onMouseUp={() => setScrolling({ direction: null })}
                     onMouseLeave={() => setScrolling({ direction: null })}
-                ></button>
+                >
+                    <img className='img-chevron-gauche' src="https://img.icons8.com/ios/50/000000/chevron-left.png" alt="Scroll left" />
+                </button>
                 <div className='ScrollContainer' ref={scrollContainer}>
                     <Stack direction='horizontal' gap={3} className='mystack'>
                         {
@@ -65,7 +65,7 @@ function Line({ type, line_title }) {
                             )}
                     </Stack>
                 </div>
-                <button className='ScrollButton ScrollButtonRight'
+                <button className='ScrollButton ScrollButtonRight d-none d-md-block'
                     onClick={scrollRight}
                     onMouseDown={() => setScrolling({ direction: 'right' })}
                     onMouseUp={() => setScrolling({ direction: null })}

@@ -23,11 +23,11 @@
 
 .image-conteneur {
     overflow: visible;
+    position: relative;
 }
 
 .BaseImage:hover {
     transform: scale(1.2);
-    z-index: 1000;
 }
 
 .modal-englobe {}

@@ -54,3 +54,11 @@
 .line-title {
     margin-left: var(--left-margin);
 }
+
+.img-chevron-gauche {
+    display: none;
+}
+
+.ScrollButtonLeft:hover .img-chevron-gauche {
+    display: block;
+}
