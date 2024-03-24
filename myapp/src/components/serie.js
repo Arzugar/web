@@ -41,7 +41,6 @@ function CustomModal({ show, onClose, children, data }) {
                         <h1>{data.titre}</h1>
                         <Button as={Link} to='/construction' className='btn-light' onClick={unshow}>
                             <img className='PlayButtonImage' src={PlayButton} alt="Ne mêne à rien" />
-
                             Mystère ...
                         </Button>
                     </div>
