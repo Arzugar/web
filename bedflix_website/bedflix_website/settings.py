@@ -28,9 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [".bedflix.fr", "127.0.0.1", ".localhost", "137.194.13.155"]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://bedlix.fr',
-    "http://bedflix.fr"
-],
+    'https://bedlix.fr',]
 
 # Application definition
 
