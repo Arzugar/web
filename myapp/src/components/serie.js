@@ -38,7 +38,7 @@ function CustomModal({ show, onClose, children, data }) {
                 <div className='big-image-container'>
                     <img className='ZoomedImage' src={data.image} alt="Bigpic" />
                     <div className='serie-title text-primary'>
-                        <h1>data.title</h1>
+                        <h1>{data.title}</h1>
                         <Button as={Link} to='/construction' className='btn-light' onClick={unshow}>
                             <img className='PlayButtonImage' src={PlayButton} alt="Ne mêne à rien" />
 
@@ -60,9 +60,9 @@ function CustomModal({ show, onClose, children, data }) {
                             </div>
                             <div className="col-4">
                                 <span className='info-title'>
-                                    {data.info_2_title}
+                                    {data.info_1_title}
                                 </span>
-                                <span >{data.info_2}</span>
+                                <span >{data.info_1}</span>
                             </div>
                         </div>
                         <div className="row">
