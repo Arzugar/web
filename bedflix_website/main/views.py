@@ -51,6 +51,9 @@ def get_evenement(_, id):
 
 
 def get_image(_, path):
-    with open("images/" + path, 'rb') as f:
-        image_data = f.read()
-    return HttpResponse(image_data, content_type='image/png')
+    try:
+        with open("images/" + path, 'rb') as f:
+            image_data = f.read()
+        return HttpResponse(image_data, content_type='image/png')
+    except FileNotFoundError:
+        return HttpResponse(status=404)
