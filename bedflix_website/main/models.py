@@ -28,6 +28,9 @@ class Element(models.Model):
 
         super(Element, self).save(*args, **kwargs)
 
+    def __str__(self):
+        return self.titre
+
 
 class Membre(Element):
     type = 'membre'
