@@ -4,6 +4,14 @@ import Stack from 'react-bootstrap/Stack';
 import Serie from './serie';
 import { useRef, useState, useEffect } from 'react';
 
+function sort_ids(ids, type) {
+    if (type === 'evenements') {
+        return ids.sort((a, b) => b - a);
+    } else {
+        return ids
+    }
+}
+
 function Line({ type, line_title }) {
     const scrollContainer = useRef(null);
     const [scrolling, setScrolling] = useState({ direction: null });
@@ -22,6 +30,8 @@ function Line({ type, line_title }) {
             setIds(data.id);
             console.log("Ids set to " + data.id);
         }).catch(err => console.error(err));
+        setIds([1]);
+
 
         const scrollInterval = setInterval(() => {
             if (scrolling.direction === 'left') {
@@ -47,7 +57,8 @@ function Line({ type, line_title }) {
                 <div className='ScrollContainer' ref={scrollContainer}>
                     <Stack direction='horizontal' gap={3} className='mystack'>
                         {
-                            ids.map(function (id) {
+
+                            sort_ids(ids, type).map(function (id) {
                                 console.log("Creating serie with id " + id);
                                 return <Serie id={id} type={type} />;
                             }

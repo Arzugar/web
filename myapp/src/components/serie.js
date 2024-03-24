@@ -59,7 +59,7 @@ function CustomModal({ show, onClose, children, data }) {
                             </div>
                             <div className="col-4">
                                 <span className='info-title'>
-                                    {data.info_1_title}
+                                    {data.info_1_title}{' '}
                                 </span>
                                 <span >{data.info_1}</span>
                             </div>
@@ -70,11 +70,10 @@ function CustomModal({ show, onClose, children, data }) {
                                     {data.description}
                                 </span>
 
-
                             </div>
                             <div className="col-4">
                                 <span className='info-title'>
-                                    {data.info_2_title}
+                                    {data.info_2_title}{' '}
                                 </span>
                                 <span >{data.info_2}</span>
 
@@ -101,7 +100,7 @@ function Serie({ type, id }) {
                 console.error("Pas réussi à récup le data:", error);
                 // Valeurs par défaut
                 setData({
-                    "Title": "Titre par défaut",
+                    "titre": "Titre par défaut",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
                     "image": 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F149367133.v2.pressablecdn.com%2Fwp-content%2Fuploads%2F2021%2F02%2Frick-astley-never-gonna-give-you-up-4k.jpg&f=1&nofb=1&ipt=a23aa21be1e1262ce10d68d5ba6817f9c4390d6b3565a289d9e79c4f50a01ae4&ipo=images',
                     "rating": 100,
@@ -113,7 +112,7 @@ function Serie({ type, id }) {
 
                 });
             });
-    }, [id]);
+    }, [id, type]);
 
     const [show, setShow] = useState(false);
 
@@ -121,10 +120,13 @@ function Serie({ type, id }) {
     const handleShow = () => setShow(true);
 
     return (
-        <>
+        <div className='image-conteneur'>
             <Image src={data.image} alt="pic" className="BaseImage" onClick={handleShow} />
+            <div className="image-overlay">
+                <h2 className="image-title text-primary">{data.titre}</h2>
+            </div>
             <CustomModal className='' show={show} onClose={handleClose} data={data} />
-        </>
+        </div>
     );
 }
 
