@@ -1,9 +1,9 @@
 {
-  "short_name": "Bedflix",
-  "name": "Site de la meilleure liste",
+  "short_name": "BEDflix",
+  "name": "Site de la liste BEDflix and chill",
   "icons": [
     {
-      "src": "logo_rond.png",
+      "src": "image/icon.png",
       "type": "image/png"
     }
   ],
