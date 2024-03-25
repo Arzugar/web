@@ -8,6 +8,9 @@
     margin-left: var(--left-margin);
 }
 
+#basic-navbar-nav {
+    background-color: var(--bg-color);
+}
 
 @media (max-width: 768px) {
 
